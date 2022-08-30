@@ -103,20 +103,20 @@ SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'NAME': 'geekshop',
-        'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'postgres',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'NAME': 'geekshop',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'USER': 'postgres',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.social_details',

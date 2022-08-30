@@ -103,6 +103,13 @@ SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'NAME': 'geekshop',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'USER': 'postgres',
+#     }
+# }
 
 DATABASES = {
     'default': {

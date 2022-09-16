@@ -208,7 +208,7 @@ EMAIL_PORT = '2525'
 # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 # EMAIL_FILE_PATH = 'tmp/email-messages/'
 
-if DEBUG:
+if not DEBUG:
     def show_toolbar(request):
         return True
 

@@ -53,6 +53,10 @@ class Basket(models.Model):
     def get_item(pk):
         return Basket.objects.filter(pk=pk).first()
 
+    @staticmethod
+    def get_product(user, product):
+        return Basket.objects.filter(user=user, product=product).first()
+
     def save(self, *args, **kwargs):
         if self.pk:
             self.product.quantity -= self.quantity - self.__class__.get_item(self.pk).quantity

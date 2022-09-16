@@ -1,3 +1,4 @@
+from django.db.models import F
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.template.loader import render_to_string
@@ -27,7 +28,7 @@ def basket_add(request, pk):
 
     product = get_object_or_404(Product, pk=pk)
 
-    basket = Basket.objects.filter(user=request.user, product=product).first()
+    basket = Basket.objects.filter(user=request.user, product=product)
 
     if not basket:
         basket = Basket(user=request.user, product=product)
